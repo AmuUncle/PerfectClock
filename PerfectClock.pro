@@ -24,3 +24,6 @@ HEADERS  += include/perfectclock.h
 
 RESOURCES += \
     res/res.qrc
+
+RC_FILE +=  \
+    res/res.rc

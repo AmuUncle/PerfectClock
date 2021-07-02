@@ -4,4 +4,8 @@
         <file>ttf/led_board-7.ttf</file>
         <file>ttf/Norum.ttf</file>
     </qresource>
+    <qresource prefix="/image">
+        <file>Clock.ico</file>
+        <file>Clock.png</file>
+    </qresource>
 </RCC>
