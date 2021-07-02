@@ -15,10 +15,12 @@ DESTDIR = bin
 
 include ($$PWD/public/public.pri)
 
-SOURCES += main.cpp\
-        perfectclock.cpp
+INCLUDEPATH += $$PWD/include
 
-HEADERS  += perfectclock.h
+SOURCES += source/main.cpp\
+        source/perfectclock.cpp
+
+HEADERS  += include/perfectclock.h
 
 RESOURCES += \
-    res.qrc
+    res/res.qrc

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/ttf">
+        <file>ttf/Huttem_FREE.ttf</file>
+        <file>ttf/led_board-7.ttf</file>
+        <file>ttf/Norum.ttf</file>
+    </qresource>
+</RCC>

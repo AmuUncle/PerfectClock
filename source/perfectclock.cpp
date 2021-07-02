@@ -226,9 +226,7 @@ void PerfectClock::CreateAllChildWnd()
 
 void PerfectClock::InitCtrl()
 {
-    m_nTimerId = startTimer(1000);
-
-    int nFontId = QFontDatabase::addApplicationFont(":/ttf/led_board-7.ttf");
+    int nFontId = QFontDatabase::addApplicationFont(":/ttf/ttf/led_board-7.ttf");
     QStringList strlistFontName = QFontDatabase::applicationFontFamilies(nFontId);
 
     if (strlistFontName.count() > 0)
@@ -239,18 +237,14 @@ void PerfectClock::InitCtrl()
 
     // 添加ImageOpacity属性;
     this->setProperty("RotationAngle", 1.0);
-
-    // 动画切换类;
     m_pAnimationOpacity = new QPropertyAnimation(this, "RotationAngle");
-    // 这里要设置的动画时间小于图片切换时间;
     m_pAnimationOpacity->setDuration(500);
     m_pAnimationOpacity->setEasingCurve(QEasingCurve::OutBack);  // 缓和曲线风格
-
-    // 设置ImageOpacity属性值的变化范围;
     m_pAnimationOpacity->setStartValue(0.0);
     m_pAnimationOpacity->setEndValue(1.0);
-    // 透明度变化及时更新绘图;
     connect(m_pAnimationOpacity, SIGNAL(valueChanged(const QVariant&)), this, SLOT(update()));
+
+    m_nTimerId = startTimer(1000);
 }
 
 void PerfectClock::InitSolts()
